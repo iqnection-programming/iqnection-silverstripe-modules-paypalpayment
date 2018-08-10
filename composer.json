@@ -1,0 +1,22 @@
+{
+	"name": "iqnection-modules/paypalpayment",
+	"description": "SilverStripe PayPal Payment",
+	"type": "silverstripe-module",
+	"license": "BSD-3-Clause",
+	"keywords": ["iqnection","modules"],
+	"authors": [
+		{
+			"name": "IQnection",
+            "homepage": "http://www.iqnection.com"
+		}
+	],
+	"require": {
+		"silverstripe/framework": "^4.0",
+		"iqnection-modules/payment" : "^2.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"IQnection\\PayPalPayment\\": "app/src/"
+		}
+	}
+}
