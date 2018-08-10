@@ -1,7 +1,7 @@
 {
 	"name": "iqnection-modules/paypalpayment",
 	"description": "SilverStripe PayPal Payment",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"license": "BSD-3-Clause",
 	"keywords": ["iqnection","modules"],
 	"authors": [
