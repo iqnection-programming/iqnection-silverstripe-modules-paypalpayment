@@ -5,7 +5,7 @@ namespace IQnection\PayPalPayment\PayPalPage;
 use SilverStripe\ORM\DataExtension;
 use Silverstripe\Forms;
 
-class PageExtension extends DataExension
+class PageExtension extends DataExtension
 {
 	private static $paypal_url = "https://www.paypal.com/cgi-bin/webscr";
 	private static $paypal_sandbox_url = "https://www.sandbox.paypal.com/cgi-bin/webscr";
@@ -20,13 +20,13 @@ class PageExtension extends DataExension
 		"PayPalPayments" => \IQnection\PayPalPayment\PayPalPayment::class
 	];
 	
-	public function updateCMSFields(Forms\FieldList &$fields)
+	public function updateCMSFields(Forms\FieldList $fields)
 	{
-		$fields->addFieldToTab("Root.PayPalSettings", Forms\HTMLEditor\HTMLEditorField::create("RedirectText", "Text Explaining PayPal Redirect")
-			->addExtraClass('stacked') );
 
 		$fields->addFieldToTab('Root.PayPalSettings', Forms\CheckboxField::create('UsePayPalSandbox','Enable Test Mode') );
 		$fields->addFieldToTab("Root.PayPalSettings", Forms\TextField::create("PayPalAccount", "PayPal Account (email address)"));
+		$fields->addFieldToTab("Root.PayPalSettings", Forms\HTMLEditor\HTMLEditorField::create("RedirectText", "Text Explaining PayPal Redirect")
+			->addExtraClass('stacked') );
 		
 		// Paypal Payments
 		$fields->addFieldToTab('Root.Payments', Forms\GridField\GridField::create(
