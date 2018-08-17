@@ -9,6 +9,7 @@ use SilverStripe\ORM;
 class PayPalPayment extends Payment
 {
 	private static $table_name = 'PayPalPayment';
+	private static $PaymentMethod = 'PayPal';
 	
 	private static $db = [
 		"TransactionID" => "Varchar(255)",
